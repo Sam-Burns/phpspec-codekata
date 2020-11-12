@@ -12,8 +12,13 @@ class CalculatorSpec extends ObjectBehavior
         $this->shouldHaveType(Calculator::class);
     }
 
-//    function it_does_a_simple_division()
-//    {
-//        $this->divide(???, ???)->shouldBe(???);
-//    }
+    function it_does_a_simple_division()
+    {
+        $this->divide(1, 4)->shouldBe(0.25);
+    }
+
+    function it_throws_exception_on_div0()
+    {
+        $this->shouldThrow(\InvalidArgumentException::class)->during('divide', [1, 0]);
+    }
 }

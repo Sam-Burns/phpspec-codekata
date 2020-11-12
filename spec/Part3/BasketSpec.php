@@ -20,4 +20,11 @@ class BasketSpec extends ObjectBehavior
 
         $this->getMessage([10.0, 16.0])->shouldReturn('Free shipping');
     }
+
+    function it_returns_shipping_cost(Calculator $calculator)
+    {
+        $calculator->add([10.0, 14.0])->willReturn(24.0);
+
+        $this->getMessage([10.0, 14.0])->shouldReturn('Shipping costs a fiver.');
+    }
 }

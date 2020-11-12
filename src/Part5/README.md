@@ -9,7 +9,7 @@ We need a class which can print random numbers.
 
 The numbers must also be printable
 
-- The class also needs to take `Printer` as a parameter. It needs to have a method called `print()` on it.
+- The class also needs to take `Printer` as a parameter.
 - The test must express that, after `printRandomNumber()` has been called on the `RandomNumberGenerator`,
 `printSomething()` should have been called on the `Printer`.
 - Hint: the assertion in this test can use `shouldHaveBeenCalled()`. This means it isn't strictly a mock object - it is

@@ -1,0 +1,6 @@
+suites:
+  main:
+    namespace: PhpSpecKata
+    psr4_prefix: PhpSpecKata
+    spec_prefix: spec
+    src_path: src/
